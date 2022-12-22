@@ -1,21 +1,16 @@
 
 const firstNumber = +prompt('Enter the first number?');
 
-let secondNumber;
-
-let mathematicalOperation;
-
-let sum;
-
-
 
 if(!isNaN(firstNumber)){
 
-    secondNumber = +prompt('Enter the second number?');
+    const secondNumber = +prompt('Enter the second number?');
 
     if(!isNaN(secondNumber)){
 
-        mathematicalOperation = prompt('Choose a math operation: add, sub, mult, div ?');
+        const mathematicalOperation = prompt('Choose a math operation: add, sub, mult, div ?');
+
+        let sum;
 
         switch (mathematicalOperation){
             case 'add':
@@ -39,12 +34,12 @@ if(!isNaN(firstNumber)){
         }
 
     } else {
-        alert('Not a valid operation.')
+        alert('Not a valid number.')
 
     }
 
 }else {
-    alert('Not a valid operation.')
+    alert('Not a valid number.')
 
 }
 
