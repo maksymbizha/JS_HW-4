@@ -1,42 +1,52 @@
 
-let firstNumber = +prompt('Enter the first number?');
+const firstNumber = +prompt('Enter the first number?');
 
 let secondNumber;
 
 let mathematicalOperation;
 
+let sum;
 
-if(firstNumber === '' || !isNaN(firstNumber)){
+
+
+if(!isNaN(firstNumber)){
 
     secondNumber = +prompt('Enter the second number?');
 
-    if(secondNumber === '' || !isNaN(secondNumber)){
+    if(!isNaN(secondNumber)){
 
         mathematicalOperation = prompt('Choose a math operation: add, sub, mult, div ?');
 
         switch (mathematicalOperation){
-            case 'add': alert(firstNumber + secondNumber);
+            case 'add':
+               sum = firstNumber + secondNumber ;
+                alert (`${firstNumber} + ${secondNumber} = ${sum}`);
                 break;
-            case 'sub':alert(firstNumber - secondNumber);
+            case 'sub':
+                sum= firstNumber - secondNumber;
+                alert (`${firstNumber} - ${secondNumber} = ${sum}`);
                 break;
-            case 'mult':alert(firstNumber * secondNumber);
+            case 'mult':
+               sum = firstNumber * secondNumber;
+                alert (`${firstNumber} * ${secondNumber} = ${sum}`);
                 break;
-            case 'div':alert(firstNumber / secondNumber);
+            case 'div':
+                sum = firstNumber / secondNumber;
+                alert (`${firstNumber} / ${secondNumber} = ${sum}`);
                 break;
-            default: alert('You have not selected any mathematical operation.')
+            default:
+                alert('Not a valid operation.')
         }
 
     } else {
-        alert('You have not selected any mathematical operation.')
+        alert('Not a valid operation.')
 
     }
 
 }else {
-    alert('You have not selected any mathematical operation.')
+    alert('Not a valid operation.')
 
 }
-
-
 
 
 
